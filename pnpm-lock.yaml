@@ -11,6 +11,9 @@ importers:
       '@vuepress/bundler-vite':
         specifier: 2.0.0-rc.20
         version: 2.0.0-rc.20(@types/node@22.13.11)(sass-embedded@1.86.0)
+      '@vuepress/plugin-blog':
+        specifier: 2.0.0-rc.11
+        version: 2.0.0-rc.11(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.11)(sass-embedded@1.86.0))(vue@3.5.13))
       '@vuepress/theme-default':
         specifier: 2.0.0-rc.87
         version: 2.0.0-rc.87(markdown-it@14.1.0)(sass-embedded@1.86.0)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.11)(sass-embedded@1.86.0))(vue@3.5.13))
@@ -523,6 +526,11 @@ packages:
     resolution: {integrity: sha512-5miIaHbDlCKnSQNN8h8sYZdb6bd+NATTMgYiRarNpSsWz8X0xfeM2No+0qKhsN3Jx6K+H9rkpTqZLsMI1k8Mew==}
     peerDependencies:
       vuepress: 2.0.0-rc.20
+
+  '@vuepress/plugin-blog@2.0.0-rc.11':
+    resolution: {integrity: sha512-onZI2fIk9jD2A1NJTOKvtfDHVKpzxc1GRbHwhsKjnl2MFW2PuExNPkZhBw+7o2UKmeZcv/Xi4pm+bp/7DScCMg==}
+    peerDependencies:
+      vuepress: 2.0.0-rc.6
 
   '@vuepress/plugin-copy-code@2.0.0-rc.86':
     resolution: {integrity: sha512-FhgzmhqbfrRGeE/ZrC5UOE3a/fMcmwTBXx+E7t+JmHs9r3cbpurrNl2xA9pUyKxqGbIyOYrQrjwmJTOsHZgpWA==}
@@ -1935,6 +1943,16 @@ snapshots:
       '@vuepress/helper': 2.0.0-rc.86(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.11)(sass-embedded@1.86.0))(vue@3.5.13))
       '@vueuse/core': 13.0.0(vue@3.5.13)
       vue: 3.5.13
+      vuepress: 2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.11)(sass-embedded@1.86.0))(vue@3.5.13)
+    transitivePeerDependencies:
+      - typescript
+
+  '@vuepress/plugin-blog@2.0.0-rc.11(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.11)(sass-embedded@1.86.0))(vue@3.5.13))':
+    dependencies:
+      '@vuepress/helper': 2.0.0-rc.86(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.11)(sass-embedded@1.86.0))(vue@3.5.13))
+      chokidar: 3.6.0
+      vue: 3.5.13
+      vue-router: 4.5.0(vue@3.5.13)
       vuepress: 2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@22.13.11)(sass-embedded@1.86.0))(vue@3.5.13)
     transitivePeerDependencies:
       - typescript
