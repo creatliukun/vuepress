@@ -1,43 +1,4 @@
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="generator" content="VuePress 2.0.0-rc.20" />
-    <style>
-      :root {
-        --vp-c-bg: #fff;
-      }
-
-      [data-theme='dark'] {
-        --vp-c-bg: #1b1b1f;
-      }
-
-      html,
-      body {
-        background-color: var(--vp-c-bg);
-      }
-    </style>
-    <script>
-      const useChoice = localStorage.getItem('vuepress-color-scheme')
-      const systemStatus =
-        'matchMedia' in window
-          ? window.matchMedia('(prefers-color-scheme: dark)').matches
-          : false
-
-      if (useChoice === 'light') {
-        document.documentElement.dataset.theme = 'light'
-      } else if (useChoice === 'dark' || systemStatus) {
-        document.documentElement.dataset.theme = 'dark'
-      }
-    </script>
-    <title>vuepress搭建博客文档 | 你好， 欢迎来到MuYang的博客 ！</title><meta name="description" content="这是我的第一个 VuePress 站点">
-    <link rel="preload" href="/vuepress/assets/style-CvrtQGa6.css" as="style"><link rel="stylesheet" href="/vuepress/assets/style-CvrtQGa6.css">
-    <link rel="modulepreload" href="/vuepress/assets/app-BunU7GrL.js"><link rel="modulepreload" href="/vuepress/assets/index.html-BcsWbElE.js">
-    <link rel="prefetch" href="/vuepress/assets/404.html-CGnIn6jO.js" as="script">
-  </head>
-  <body>
-    <div id="app"><!--[--><div class="vp-theme-container external-link-icon" vp-container><!--[--><header class="vp-navbar" vp-navbar><div class="vp-toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a class="route-link" href="/vuepress/"><!----><span class="vp-site-name" aria-hidden="true">你好， 欢迎来到MuYang的博客 ！</span></a></span><div class="vp-navbar-items-wrapper" style=""><!--[--><!--]--><!----><!--[--><!--]--><button type="button" class="vp-toggle-color-mode-button" title="toggle color mode"><svg class="light-icon" viewbox="0 0 32 32" style=""><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg class="dark-icon" viewbox="0 0 32 32" style="display:none;"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="vp-sidebar-mask"></div><!--[--><aside class="vp-sidebar" vp-sidebar><!----><!--[--><!--]--><ul class="vp-sidebar-items"><!--[--><li><p tabindex="0" class="vp-sidebar-item vp-sidebar-heading">vuepress搭建博客文档 <!----></p><!----></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="vp-page"><!--[--><!--]--><div vp-content><!--[--><!--]--><div><h1 id="vuepress搭建博客文档" tabindex="-1"><a class="header-anchor" href="#vuepress搭建博客文档"><span>vuepress搭建博客文档</span></a></h1><h1 id="_1-安装nodejs" tabindex="-1"><a class="header-anchor" href="#_1-安装nodejs"><span>1.安装nodejs</span></a></h1><p>Node.js v18.19.0+ 包管理器，如 pnpm、yarn、npm 等。</p><h2 id="手动创建" tabindex="-1"><a class="header-anchor" href="#手动创建"><span>手动创建</span></a></h2><ul><li>.1创建并进入一个新目录</li></ul><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"><span class="token function">mkdir</span> vuepress-starter</span>
+import{_ as n,c as a,a as e,o as l}from"./app-BunU7GrL.js";const i={};function p(t,s){return l(),a("div",null,s[0]||(s[0]=[e(`<h1 id="vuepress搭建博客文档" tabindex="-1"><a class="header-anchor" href="#vuepress搭建博客文档"><span>vuepress搭建博客文档</span></a></h1><h1 id="_1-安装nodejs" tabindex="-1"><a class="header-anchor" href="#_1-安装nodejs"><span>1.安装nodejs</span></a></h1><p>Node.js v18.19.0+ 包管理器，如 pnpm、yarn、npm 等。</p><h2 id="手动创建" tabindex="-1"><a class="header-anchor" href="#手动创建"><span>手动创建</span></a></h2><ul><li>.1创建并进入一个新目录</li></ul><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"><span class="token function">mkdir</span> vuepress-starter</span>
 <span class="line"><span class="token builtin class-name">cd</span> vuepress-starter</span>
 <span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><ul><li>2.初始化项目</li></ul><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line"><span class="token function">git</span> init</span>
 <span class="line"><span class="token function">pnpm</span> init</span>
@@ -135,7 +96,4 @@
 <span class="line">如果你的项目托管在非根目录</span>
 <span class="line">（例如 https://<span class="token operator">&lt;</span>username<span class="token operator">&gt;</span>.github.io/<span class="token operator">&lt;</span>repository-name<span class="token operator">&gt;</span>/），</span>
 <span class="line">而 base 未正确设置，则会导致资源路径错误。</span>
-<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><!--[--><!--]--></div><footer class="vp-page-meta"><!----><div class="vp-meta-item git-info"><div class="vp-meta-item last-updated"><span class="meta-item-label">最近更新：: </span><time class="meta-item-info" datetime="2025-03-24T15:46:57.000Z" data-allow-mismatch>2025/3/24 15:46</time></div><div class="vp-meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: 952476356@qq.com">creatliukun</span><!----><!--]--><!--]--></span></div></div></footer><!----><!--[--><!--]--></main><!--]--></div><!--[--><!----><!--]--><!--]--></div>
-    <script type="module" src="/vuepress/assets/app-BunU7GrL.js" defer></script>
-  </body>
-</html>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,36)]))}const u=n(i,[["render",p]]),r=JSON.parse('{"path":"/","title":"vuepress搭建博客文档","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"手动创建","slug":"手动创建","link":"#手动创建","children":[]},{"level":2,"title":"目录结构","slug":"目录结构","link":"#目录结构","children":[]},{"level":2,"title":"开始使用 VuePress","slug":"开始使用-vuepress","link":"#开始使用-vuepress","children":[]},{"level":2,"title":"自动化构建","slug":"自动化构建","link":"#自动化构建","children":[]},{"level":2,"title":"注意事项","slug":"注意事项","link":"#注意事项","children":[]}],"git":{"updatedTime":1742831217000,"contributors":[{"name":"creatliukun","username":"creatliukun","email":"952476356@qq.com","commits":3,"url":"https://github.com/creatliukun"}],"changelog":[{"hash":"e66341443fd433f483d7839416de7bf35bf56224","time":1742831217000,"email":"952476356@qq.com","author":"creatliukun","message":"feat: 新建文档信息"},{"hash":"0cdc5ded9f1c262bc19438a7ee98e04ab6293c5a","time":1742750963000,"email":"952476356@qq.com","author":"creatliukun","message":"docs: 修改文件名"},{"hash":"89433a7fefe44fabd06c91b370f76e0a38ac31d3","time":1742748424000,"email":"952476356@qq.com","author":"creatliukun","message":"feat: init"}]},"filePathRelative":"README.md"}');export{u as comp,r as data};
