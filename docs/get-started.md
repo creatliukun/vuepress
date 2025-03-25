@@ -55,12 +55,55 @@ docs/.vuepress 目录，即源文件目录下的 .vuepress 目录，是放置所
 + 示例 .gitignore 文件
 ```
 # VuePress 默认临时文件目录
-.vuepress/.temp
+# .vuepress/.temp
+/docs/.vuepress/.temp/
 # VuePress 默认缓存目录
-.vuepress/.cache
+# .vuepress/.cache
+/docs/.vuepress/.cache/
 # VuePress 默认构建生成的静态文件目录
 .vuepress/dist
 ```
++ 注意：如果已经将 .vuepress/.temp和.vuepress/.cache进行了git追踪
+那么可以检查一下配置是否正确，之前的配置文件错误，改为
+```bash
+# 忽略 docs/.vuepress/.temp 目录
+/docs/.vuepress/.temp/
+
+# 忽略 docs/.vuepress/.cache 目录
+/docs/.vuepress/.cache/
+```
+解析: 
++ 路径前加 / 表示从项目根目录开始匹配，确保路径唯一性。
++ 每个目录末尾加上 /，明确表示这是目录而非文件。
+2. 停止跟踪已存在的文件或目录
+如果 docs/.vuepress/.temp 或 docs/.vuepress/.cache 已经被 Git 跟踪，则忽略规则不会生效。你需要先停止跟踪这些目录：
+```bash
+# 停止跟踪 docs/.vuepress/.temp 和 docs/.vuepress/.cache
+git rm -r --cached docs/.vuepress/.temp
+git rm -r --cached docs/.vuepress/.cache
+```
+执行完成后，重新提交更改：
+```bash
+git commit -m "Stop tracking docs/.vuepress/.temp and docs/.vuepress/.cache directories"
+```
++ 3（可选）如果还是没生效，可以尝试清理 Git 缓存并重新应用忽略规则
+```bash
+# 清理缓存
+git rm -r --cached .
+
+# 重新添加所有文件
+git add .
+
+# 提交更改
+git commit -m "Update .gitignore rules and clean cache"
+```
++ 4. 验证忽略规则是否生效
+验证 .gitignore 是否生效，可以使用以下命令检查 docs/.vuepress/.temp 和 docs/.vuepress/.cache 是否还在 Git 的跟踪范围内：
+```bash
+git check-ignore -v docs/.vuepress/.temp
+git check-ignore -v docs/.vuepress/.cache
+```
+
 ## 开始使用 VuePress
 + 启动开发服务器
 你可以在 package.json 中添加一些 scripts ：

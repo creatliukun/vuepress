@@ -1,7 +1,7 @@
 ---
 date: 2025-3-25
 category:
-  - 前端
+  - vite
 tag:
   - js
 archive: true
