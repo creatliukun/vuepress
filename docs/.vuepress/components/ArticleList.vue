@@ -12,7 +12,7 @@ defineProps({
 
 <template>
   <div class="article-wrapper">
-    <div v-if="!items.length">Nothing in here.</div>
+    <div v-if="!items.length">暂无数据</div>
 
     <article
       v-for="{ info, path } in items"
@@ -22,8 +22,8 @@ defineProps({
     >
       <header class="title">
         {{
-          (isTimeline ? `${new Date(info.date).toLocaleDateString()}: ` : '') +
-          info.title
+        (isTimeline ? `${new Date(info.date).toLocaleDateString()}: ` : '') +
+        info.title
         }}
       </header>
 
@@ -32,13 +32,12 @@ defineProps({
       <div class="article-info">
         <span v-if="info.author" class="author">Author: {{ info.author }}</span>
 
-        <span v-if="info.date && !isTimeline" class="date"
-          >Date: {{ new Date(info.date).toLocaleDateString() }}</span
-        >
+        <span
+          v-if="info.date && !isTimeline"
+          class="date"
+        >Date: {{ new Date(info.date).toLocaleDateString() }}</span>
 
-        <span v-if="info.category" class="category"
-          >Category: {{ info.category.join(', ') }}</span
-        >
+        <span v-if="info.category" class="category">Category: {{ info.category.join(', ') }}</span>
 
         <span v-if="info.tag" class="tag">Tag: {{ info.tag.join(', ') }}</span>
       </div>
@@ -53,7 +52,10 @@ defineProps({
 
 .article-wrapper {
   text-align: center;
-  @include mixins.content_wrapper;
+  // @include mixins.content_wrapper;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
 }
 
 .article {
@@ -67,6 +69,7 @@ defineProps({
   border: 1px solid var(--c-border);
   border-radius: 0.4rem;
   color: var(--c-text);
+  border: 1px solid #ccc;
 
   text-align: start;
 
